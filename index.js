@@ -1,3 +1,17 @@
+document.querySelector('h1').innerHTML = "Precione GENERAR!"
+var xHid = document.querySelectorAll('p')
+for (var i=0; i < xHid.length; i++)
+{
+  xHid[i].hidden = true;
+}
+document.querySelector("button").addEventListener("click", refreshWP)
+
+function refreshWP(){
+  var xHid = document.querySelectorAll('p')
+  for (var i=0; i < xHid.length; i++)
+  {
+    xHid[i].hidden = false;
+  }
 var xVar1 = Math.trunc(Math.random() * 6) + 1;
 var xVar2 = Math.trunc(Math.random() * 6) + 1;
 
@@ -61,4 +75,5 @@ function checkIMG2(xvar)
       document.getElementById("img-02").src = "images/dice6.png";
       break;
   }
+}
 }
